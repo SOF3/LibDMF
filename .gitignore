@@ -1,0 +1,11 @@
+.idea/deployment.xml
+.idea/misc.xml
+.idea/workspace.xml
+.idea/dataSource*
+.idea/dictionaries
+
+*.swp
+*.log
+
+libs/*.phar
+pm*.sh

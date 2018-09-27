@@ -1,0 +1,6 @@
+name: LibDMF
+version: 1.0.0
+api: [3.0.0]
+description: Data Model Framework
+antigen: SOFe\LibDMF
+author: SOFe
