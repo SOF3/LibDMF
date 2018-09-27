@@ -1,7 +1,7 @@
 # LibDMF
 Library for Data Model Framework.
 
-Each Data Model (DM) represents one object persisted in a possibly remote, real-time-updated data source (DS) of any type. The DS is abstract and is not limited to any kind of database, but it must support some form of synchronization. LibDMF also has built-in specialization to generate MySQL queries. It is designed to be:
+Each Data Model (DM) represents one object persisted in a possibly remote, real-time-updated data source (DS) that supports SQL. It is designed to be:
 
 ##### Unique
 Each DM is assigned with a universally-unique identifier called _DOID_  (does not necessarily comply with the UUID format) generated (non-cryptographically-secure) randomly.

@@ -9,3 +9,5 @@
 
 libs/*.phar
 pm*.sh
+
+/vendor/

@@ -22,27 +22,10 @@ declare(strict_types=1);
 
 namespace SOFe\LibDMF;
 
-class DataModelConfig{
-	/** @var string */
-	private $table;
-	/** @var DataSource */
-	private $ds;
-	/** @var float */
-	private $lingerTime;
+use Composer\Autoload\ClassLoader;
 
-	public function getTable() : string{
-		return $this->table;
-	}
+require_once __DIR__ . '/../vendor/autoload.php';
 
-	public function getDs() : DataSource{
-		return $this->ds;
-	}
-
-	public function getLingerTime() : float{
-		return $this->lingerTime;
-	}
-
-	public function getDoidFragmentSizes() : array{
-		return [4, 4];
-	}
-}
+$classLoader = new ClassLoader();
+$classLoader->addPsr4("SOFe\\LibDMF\\", __DIR__, true);
+$classLoader->register();

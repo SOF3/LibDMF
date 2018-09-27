@@ -22,27 +22,6 @@ declare(strict_types=1);
 
 namespace SOFe\LibDMF;
 
-class DataModelConfig{
-	/** @var string */
-	private $table;
-	/** @var DataSource */
-	private $ds;
-	/** @var float */
-	private $lingerTime;
-
-	public function getTable() : string{
-		return $this->table;
-	}
-
-	public function getDs() : DataSource{
-		return $this->ds;
-	}
-
-	public function getLingerTime() : float{
-		return $this->lingerTime;
-	}
-
-	public function getDoidFragmentSizes() : array{
-		return [4, 4];
-	}
+interface DataSource{
+	public function executeQuery(string $query, array $args, callable $onSuccess, callable $onError) : void;
 }

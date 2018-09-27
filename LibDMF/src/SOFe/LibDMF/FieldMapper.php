@@ -22,27 +22,8 @@ declare(strict_types=1);
 
 namespace SOFe\LibDMF;
 
-class DataModelConfig{
-	/** @var string */
-	private $table;
-	/** @var DataSource */
-	private $ds;
-	/** @var float */
-	private $lingerTime;
+interface FieldMapper{
+	public function field2column(string $field) : string;
 
-	public function getTable() : string{
-		return $this->table;
-	}
-
-	public function getDs() : DataSource{
-		return $this->ds;
-	}
-
-	public function getLingerTime() : float{
-		return $this->lingerTime;
-	}
-
-	public function getDoidFragmentSizes() : array{
-		return [4, 4];
-	}
+	public function column2field(string $column) : string;
 }
